@@ -18,29 +18,24 @@ Just install, copy model, and go — no setup required.
 
 ```bash
 npm install next-live2d
-🧱 Copy model to your public folder:
-bash
-Sao chép
-Chỉnh sửa
-cp -r node_modules/next-live2d/models ./public/
 ```
+
 
 🧩 Usage in Next.js (app/layout.tsx)
 ```tsx
 'use client'
 
-import { ReactNode } from 'react'
-import dynamic from 'next/dynamic'
-import './globals.css'
+import { Live2DWidget } from 'next-live2d' {/* Import tại đây */}
 
-const Live2DWidget = dynamic(() => import('next-live2d'), { ssr: false })
+import { ReactNode } from 'react'
+import './globals.css'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
         <main>{children}</main>
-        <Live2DWidget />
+        <Live2DWidget modelName="mai" /> {/* Bạn có thể đổi model khác tại đây */}
       </body>
     </html>
   )
@@ -55,43 +50,43 @@ By default, the widget looks for:
 
 | Model Name           | Preview (coming soon)         | Usage                                |
 |----------------------|-------------------------------|--------------------------------------|
-| histoire             | ![](./public/models/histoire.png)                      | `<Live2DWidget model="histoire" />`             |
-| bilibili-22          | ![](./public/models/bilibili-22.png)                     | `<Live2DWidget model="bilibili-22" />`          |
-| bilibili-33          | ![](./public/models/bilibili-33.png)                     | `<Live2DWidget model="bilibili-33" />`          |
-| cat-black            | ![](./public/models/cat-black.png)                      | `<Live2DWidget model="cat-black" />`            |
-| cat-white            | ![](./public/models/cat-white.png)                    | `<Live2DWidget model="cat-white" />`            |
-| chino                | ![](./public/models/chino.png)                     | `<Live2DWidget model="chino" />`                |
-| date                 | ![](./public/models/date)                  | `<Live2DWidget model="date" />`                 |
-| hallo                | ![](./public/models/hallo.png)                       | `<Live2DWidget model="hallo" />`                |
-| haruto               | ![](./public/models/haruto.png)                        | `<Live2DWidget model="haruto" />`               |
-| hibiki               | ![](./public/models/hibiki.png)                         | `<Live2DWidget model="hibiki" />`               |
-| HK416-1-normal       | ![](./public/models/HK416-1-normal.png)                         | `<Live2DWidget model="HK416-1-normal" />`       |
-| HK416-2-destroy      | ![](./public/models/HK416-2-destroy.png)                         | `<Live2DWidget model="HK416-2-destroy" />`      |
-| HK416-2-normal       | ![](./public/models/HK416-2-normal.png)                        | `<Live2DWidget model="HK416-2-normal" />`       |
-| Kar98k-normal        | ![](./public/models/Kar98k-normal.png)                       | `<Live2DWidget model="Kar98k-normal" />`        |
-| kobayaxi             | ![](./public/models/kobayaxi.png)                        | `<Live2DWidget model="kobayaxi" />`             |
-| koharu               | ![](./public/models/koharu.png)                      | `<Live2DWidget model="koharu" />`               |
-| kp31                 | ![](./public/models/kp31.png)                         | `<Live2DWidget model="kp31" />`                 |
-| live_uu              | ![](./public/models/live_uu.png)                       | `<Live2DWidget model="live_uu" />`              |
-| mai                  | ![](./public/models/mai.png)                         | `<Live2DWidget model="mai" />`                  |
-| murakumo             | ![]()                         | `<Live2DWidget model="murakumo" />`             |
-| Pio                  | ![]()                         | `<Live2DWidget model="Pio" />`                  |
-| platelet             | ![]()                         | `<Live2DWidget model="platelet" />`             |
-| platelet_2           | ![]()                         | `<Live2DWidget model="platelet_2" />`           |
-| potion-Maker-Pio     | ![]()                         | `<Live2DWidget model="potion-Maker-Pio" />`     |
-| rem                  | ![]()                         | `<Live2DWidget model="rem" />`                  |
-| rem_2                | ![]()                         | `<Live2DWidget model="rem_2" />`                |
-| Senko_Normals        | ![]()                         | `<Live2DWidget model="Senko_Normals" />`        |
-| shizuku              | ![]()                         | `<Live2DWidget model="shizuku" />`              |
-| shizuku_48           | ![]()                         | `<Live2DWidget model="shizuku_48" />`           |
-| shizuku_pajama       | ![]()                         | `<Live2DWidget model="shizuku_pajama" />`       |
-| terisa               | ![]()                         | `<Live2DWidget model="terisa" />`               |
-| tia                  | ![]()                         | `<Live2DWidget model="tia" />`                  |
-| umaru                | ![]()                         | `<Live2DWidget model="umaru" />`                |
-| uni                  | ![]()                         | `<Live2DWidget model="uni" />`                  |
-| wed_16               | ![]()                         | `<Live2DWidget model="wed_16" />`               |
-| xisitina             | ![]()                         | `<Live2DWidget model="xisitina" />`             |
-| z16                  | ![]()                         | `<Live2DWidget model="z16" />`                  |
+| histoire             | ![](./public/models/histoire.png)                      | `<Live2DWidget modelName="histoire" />`             |
+| bilibili-22          | ![](./public/models/bilibili-22.png)                     | `<Live2DWidget modelName="bilibili-22" />`          |
+| bilibili-33          | ![](./public/models/bilibili-33.png)                     | `<Live2DWidget modelName="bilibili-33" />`          |
+| cat-black            | ![](./public/models/cat-black.png)                      | `<Live2DWidget modelName="cat-black" />`            |
+| cat-white            | ![](./public/models/cat-white.png)                    | `<Live2DWidget modelName="cat-white" />`            |
+| chino                | ![](./public/models/chino.png)                     | `<Live2DWidget modelName="chino" />`                |
+| date                 | ![](./public/models/date)                  | `<Live2DWidget modelName="date" />`                 |
+| hallo                | ![](./public/models/hallo.png)                       | `<Live2DWidget modelName="hallo" />`                |
+| haruto               | ![](./public/models/haruto.png)                        | `<Live2DWidget modelName="haruto" />`               |
+| hibiki               | ![](./public/models/hibiki.png)                         | `<Live2DWidget modelName="hibiki" />`               |
+| HK416-1-normal       | ![](./public/models/HK416-1-normal.png)                         | `<Live2DWidget modelName="HK416-1-normal" />`       |
+| HK416-2-destroy      | ![](./public/models/HK416-2-destroy.png)                         | `<Live2DWidget modelName="HK416-2-destroy" />`      |
+| HK416-2-normal       | ![](./public/models/HK416-2-normal.png)                        | `<Live2DWidget modelName="HK416-2-normal" />`       |
+| Kar98k-normal        | ![](./public/models/Kar98k-normal.png)                       | `<Live2DWidget modelName="Kar98k-normal" />`        |
+| kobayaxi             | ![](./public/models/kobayaxi.png)                        | `<Live2DWidget modelName="kobayaxi" />`             |
+| koharu               | ![](./public/models/koharu.png)                      | `<Live2DWidget modelName="koharu" />`               |
+| kp31                 | ![](./public/models/kp31.png)                         | `<Live2DWidget modelName="kp31" />`                 |
+| live_uu              | ![](./public/models/live_uu.png)                       | `<Live2DWidget modelName="live_uu" />`              |
+| mai                  | ![](./public/models/mai.png)                         | `<Live2DWidget modelName="mai" />`                  |
+| murakumo             | ![]()                         | `<Live2DWidget modelName="murakumo" />`             |
+| Pio                  | ![]()                         | `<Live2DWidget modelName="Pio" />`                  |
+| platelet             | ![]()                         | `<Live2DWidget modelName="platelet" />`             |
+| platelet_2           | ![]()                         | `<Live2DWidget modelName="platelet_2" />`           |
+| potion-Maker-Pio     | ![]()                         | `<Live2DWidget modelName="potion-Maker-Pio" />`     |
+| rem                  | ![]()                         | `<Live2DWidget modelName="rem" />`                  |
+| rem_2                | ![]()                         | `<Live2DWidget modelName="rem_2" />`                |
+| Senko_Normals        | ![]()                         | `<Live2DWidget modelName="Senko_Normals" />`        |
+| shizuku              | ![]()                         | `<Live2DWidget modelName="shizuku" />`              |
+| shizuku_48           | ![]()                         | `<Live2DWidget modelName="shizuku_48" />`           |
+| shizuku_pajama       | ![]()                         | `<Live2DWidget modelName="shizuku_pajama" />`       |
+| terisa               | ![]()                         | `<Live2DWidget modelName="terisa" />`               |
+| tia                  | ![]()                         | `<Live2DWidget modelName="tia" />`                  |
+| umaru                | ![]()                         | `<Live2DWidget modelName="umaru" />`                |
+| uni                  | ![]()                         | `<Live2DWidget modelName="uni" />`                  |
+| wed_16               | ![]()                         | `<Live2DWidget modelName="wed_16" />`               |
+| xisitina             | ![]()                         | `<Live2DWidget modelName="xisitina" />`             |
+| z16                  | ![]()                         | `<Live2DWidget modelName="z16" />`                  |
 
 
 ## 🧑‍💻 Author
