@@ -1,6 +1,6 @@
 {
   "name": "next-live2d",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/Live2DWidget.js",
   "types": "dist/Live2DWidget.d.ts",
   "files": [
