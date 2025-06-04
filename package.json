@@ -1,12 +1,17 @@
 {
   "name": "next-live2d",
-  "version": "1.0.2",
-  "main": "dist/Live2DWidget.js",
-  "types": "dist/Live2DWidget.d.ts",
+  "version": "1.2.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "models"
+    "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsc"
   },
@@ -27,5 +32,13 @@
   "bugs": {
     "url": "https://github.com/dangtranhuu/next-live2d/issues"
   },
-  "homepage": "https://github.com/dangtranhuu/next-live2d#readme"
+  "homepage": "https://github.com/dangtranhuu/next-live2d#readme",
+  "devDependencies": {
+    "@types/react": "^19.1.6",
+    "react": "^19.1.0",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0"
+  }
 }
