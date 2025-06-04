@@ -5,7 +5,7 @@ A simple React component to embed Live2D models (via `live2d-widget`) in Next.js
 [![GitHub Repo stars](https://img.shields.io/github/stars/dangtranhuu/next-live2d?style=social)](https://github.com/dangtranhuu/next-live2d)
 
 
-![Live2D Widget Preview](https://user-images.githubusercontent.com/your-preview-image.png)
+![Live2D Widget Preview](./public/main.gif)
 
 ## ✨ Features
 
