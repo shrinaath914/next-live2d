@@ -1,6 +1,7 @@
 'use client';
 import { useEffect } from 'react';
-export default function Live2DWidget({ modelJsonPath = '/models/histoire/model.json' }) {
+export default function Live2DWidget({ modelName }) {
+    const modelJsonPath = `https://raw.githubusercontent.com/dangtranhuu/next-live2d/refs/heads/main/models/${modelName}/model.json`;
     useEffect(() => {
         const script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js';

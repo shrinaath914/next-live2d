@@ -1,5 +1,5 @@
 type Props = {
-    modelJsonPath?: string;
+    modelName: string;
 };
-export default function Live2DWidget({ modelJsonPath }: Props): any;
+export default function Live2DWidget({ modelName }: Props): any;
 export {};
