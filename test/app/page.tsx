@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <h1>Hello Live2D</h1>
-      <Live2DWidget modelName="cat-white" />
+      <Live2DWidget modelName="mai" />
     </>
   );
 }

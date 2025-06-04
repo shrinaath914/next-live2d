@@ -55,25 +55,25 @@ By default, the widget looks for:
 
 | Model Name           | Preview (coming soon)         | Usage                                |
 |----------------------|-------------------------------|--------------------------------------|
-| histoire             | ![]()                         | `<Live2DWidget model="histoire" />`             |
-| bilibili-22          | ![]()                         | `<Live2DWidget model="bilibili-22" />`          |
-| bilibili-33          | ![]()                         | `<Live2DWidget model="bilibili-33" />`          |
-| cat-black            | ![]()                         | `<Live2DWidget model="cat-black" />`            |
-| cat-white            | ![]()                         | `<Live2DWidget model="cat-white" />`            |
-| chino                | ![]()                         | `<Live2DWidget model="chino" />`                |
-| date                 | ![]()                         | `<Live2DWidget model="date" />`                 |
-| hallo                | ![]()                         | `<Live2DWidget model="hallo" />`                |
-| haruto               | ![]()                         | `<Live2DWidget model="haruto" />`               |
-| hibiki               | ![]()                         | `<Live2DWidget model="hibiki" />`               |
-| HK416-1-normal       | ![]()                         | `<Live2DWidget model="HK416-1-normal" />`       |
-| HK416-2-destroy      | ![]()                         | `<Live2DWidget model="HK416-2-destroy" />`      |
-| HK416-2-normal       | ![]()                         | `<Live2DWidget model="HK416-2-normal" />`       |
-| Kar98k-normal        | ![]()                         | `<Live2DWidget model="Kar98k-normal" />`        |
-| kobayaxi             | ![]()                         | `<Live2DWidget model="kobayaxi" />`             |
-| koharu               | ![]()                         | `<Live2DWidget model="koharu" />`               |
-| kp31                 | ![]()                         | `<Live2DWidget model="kp31" />`                 |
-| live_uu              | ![]()                         | `<Live2DWidget model="live_uu" />`              |
-| mai                  | ![]()                         | `<Live2DWidget model="mai" />`                  |
+| histoire             | ![](./public/models/histoire.png)                      | `<Live2DWidget model="histoire" />`             |
+| bilibili-22          | ![](./public/models/bilibili-22.png)                     | `<Live2DWidget model="bilibili-22" />`          |
+| bilibili-33          | ![](./public/models/bilibili-33.png)                     | `<Live2DWidget model="bilibili-33" />`          |
+| cat-black            | ![](./public/models/cat-black.png)                      | `<Live2DWidget model="cat-black" />`            |
+| cat-white            | ![](./public/models/cat-white.png)                    | `<Live2DWidget model="cat-white" />`            |
+| chino                | ![](./public/models/chino.png)                     | `<Live2DWidget model="chino" />`                |
+| date                 | ![](./public/models/date)                  | `<Live2DWidget model="date" />`                 |
+| hallo                | ![](./public/models/hallo.png)                       | `<Live2DWidget model="hallo" />`                |
+| haruto               | ![](./public/models/haruto.png)                        | `<Live2DWidget model="haruto" />`               |
+| hibiki               | ![](./public/models/hibiki.png)                         | `<Live2DWidget model="hibiki" />`               |
+| HK416-1-normal       | ![](./public/models/HK416-1-normal.png)                         | `<Live2DWidget model="HK416-1-normal" />`       |
+| HK416-2-destroy      | ![](./public/models/HK416-2-destroy.png)                         | `<Live2DWidget model="HK416-2-destroy" />`      |
+| HK416-2-normal       | ![](./public/models/HK416-2-normal.png)                        | `<Live2DWidget model="HK416-2-normal" />`       |
+| Kar98k-normal        | ![](./public/models/Kar98k-normal.png)                       | `<Live2DWidget model="Kar98k-normal" />`        |
+| kobayaxi             | ![](./public/models/kobayaxi.png)                        | `<Live2DWidget model="kobayaxi" />`             |
+| koharu               | ![](./public/models/koharu.png)                      | `<Live2DWidget model="koharu" />`               |
+| kp31                 | ![](./public/models/kp31.png)                         | `<Live2DWidget model="kp31" />`                 |
+| live_uu              | ![](./public/models/live_uu.png)                       | `<Live2DWidget model="live_uu" />`              |
+| mai                  | ![](./public/models/mai.png)                         | `<Live2DWidget model="mai" />`                  |
 | murakumo             | ![]()                         | `<Live2DWidget model="murakumo" />`             |
 | Pio                  | ![]()                         | `<Live2DWidget model="Pio" />`                  |
 | platelet             | ![]()                         | `<Live2DWidget model="platelet" />`             |
