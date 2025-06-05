@@ -1,6 +1,8 @@
 'use client'
 import { useState } from 'react'
 import { Live2DWidget } from 'next-live2d'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 const MODELS = [
   "Kar98k-normal",
@@ -118,14 +120,14 @@ export default function Home() {
               <span className="select-none">$</span> npm install next-live2d
             </div>
 
-            <pre className="bg-[#1a1a1a] text-gray-100 text-sm p-5 rounded-lg font-mono leading-relaxed overflow-auto whitespace-pre-wrap">
+            <SyntaxHighlighter language="tsx" style={vscDarkPlus}>
               {`'use client'
 import { Live2DWidget } from 'next-live2d'
 
 export default function Page() {
   return <Live2DWidget modelName="${model}" />
 }`}
-            </pre>
+            </SyntaxHighlighter>
 
           </div>
 
