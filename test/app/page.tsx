@@ -53,6 +53,15 @@ export default function Home() {
           <p className="text-lg mb-6">
             A drop-in Live2D widget for Next.js – minimal, customizable, and fun.
           </p>
+          <p>
+          <a
+              href="https://www.npmjs.com/package/next-live2d"
+              target="_blank"
+              className="text-sm"
+            >
+              https://www.npmjs.com/package/next-live2d
+            </a>
+          </p>
 
           <select
             value={model}
