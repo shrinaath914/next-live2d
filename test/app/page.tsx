@@ -48,8 +48,9 @@ export default function Home() {
   const [model, setModel] = useState('Kar98k-normal')
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white p-8 pt-[100px]">
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white p-8 pt-[100px] pb-[200px]">
+
+      <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between gap-8">
         <div className="flex-1">
           <h1 className="text-4xl font-bold mb-4">next-live2d</h1>
           <p className="text-lg mb-6">
@@ -115,7 +116,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="mt-16 w-full max-w-2xl bg-[#0e0e0e] border border-[#222] rounded-xl p-6 space-y-6 shadow-lg">
+          <div className="mt-16 w-full max-w-2xl bg-[#0e0e0e] border border-[#222] rounded-xl p-[10px] space-y-6 shadow-lg">
             <div className="text-green-400 font-mono text-sm tracking-wide">
               <span className="select-none">$</span> npm install next-live2d
             </div>
@@ -135,9 +136,10 @@ export default function Page() {
 
         </div>
 
-        <div className="w-[300px] h-[600px] relative">
-          <Live2DWidget modelName={model} />
-        </div>
+        <Live2DWidget modelName={model} />
+
+
+
       </div>
     </div>
   )
