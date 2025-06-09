@@ -31,7 +31,7 @@ const MODELS = [
   "potion-Maker-Pio",
   "rem",
   "rem_2",
-  "Senko_Normals",
+  "senko",
   "shizuku",
   "shizuku_48",
   "shizuku_pajama",
