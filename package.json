@@ -1,6 +1,6 @@
 {
   "name": "next-live2d",
-  "version": "1.2.3",
+  "version": "1.2.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/dangtranhuu/next-live2d/issues"
   },
-  "homepage": "https://github.com/dangtranhuu/next-live2d#readme",
+  "homepage": "https://next-live2d.vercel.app",
   "devDependencies": {
     "@types/react": "^19.1.6",
     "react": "^19.1.0",
