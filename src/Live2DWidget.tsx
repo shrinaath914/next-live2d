@@ -42,7 +42,6 @@ export default function Live2DWidget({ modelName, style, className }: Props) {
         Object.assign(el.style, {
           position: 'fixed',
           right: '0px',
-          bottom: '-20px',
           transition: 'bottom 0.3s ease-in-out',
           zIndex: '9999',
           pointerEvents: 'none',
