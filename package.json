@@ -18,7 +18,10 @@
   "keywords": [
     "live2d",
     "nextjs",
-    "widget"
+    "widget",
+    "react-component",
+    "2d-model",
+    "virtual-character"
   ],
   "license": "MIT",
   "author": {
@@ -34,11 +37,12 @@
   },
   "homepage": "https://next-live2d.vercel.app",
   "devDependencies": {
-    "@types/react": "^19.1.6",
-    "react": "^19.1.0",
-    "typescript": "^5.8.3"
+    "react": "^18.2.0",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
   },
   "peerDependencies": {
-    "react": "^19.1.0"
+    "react": ">=18 <20",
+    "react-dom": ">=18 <20"
   }
 }
