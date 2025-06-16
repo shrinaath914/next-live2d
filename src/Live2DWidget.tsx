@@ -1,21 +1,27 @@
-'use client'
-import { useEffect } from 'react'
+'use client';
+import { useEffect } from 'react';
 
 type Props = {
-  modelName: string
+  modelName: string;
   style?: React.CSSProperties;
   className?: string;
-}
+};
 
 export default function Live2DWidget({ modelName, style, className }: Props) {
-  const modelJsonPath = `https://raw.githubusercontent.com/dangtranhuu/next-live2d/refs/heads/main/models/${modelName}/model.json`
+  const modelJsonPath = `https://raw.githubusercontent.com/dangtranhuu/next-live2d/refs/heads/main/models/${modelName}/model.json`;
 
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js'
-    script.async = true
+    // ✅ Đã khởi tạo rồi thì không lặp lại
+    if ((window as any).__live2d_initialized) return;
+
+    const script = document.createElement('script');
+    script.src =
+      'https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js';
+    script.async = true;
 
     script.onload = () => {
+      if ((window as any).__live2d_initialized) return;
+
       // @ts-ignore
       window.L2Dwidget?.init({
         model: {
@@ -33,11 +39,13 @@ export default function Live2DWidget({ modelName, style, className }: Props) {
           opacityDefault: 0.8,
           opacityOnHover: 0.2,
         },
-      })
+      });
+
+      (window as any).__live2d_initialized = true;
 
       const waitForWidget = () => {
-        const el = document.querySelector('#live2d-widget') as HTMLElement
-        if (!el) return requestAnimationFrame(waitForWidget)
+        const el = document.querySelector('#live2d-widget') as HTMLElement;
+        if (!el) return requestAnimationFrame(waitForWidget);
 
         Object.assign(el.style, {
           position: 'fixed',
@@ -46,18 +54,30 @@ export default function Live2DWidget({ modelName, style, className }: Props) {
           zIndex: '9999',
           pointerEvents: 'none',
           ...style,
-        })
+        });
 
         if (className) {
-          el.className += ' ' + className
+          el.className += ' ' + className;
         }
+      };
+
+      waitForWidget();
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      // ✅ cleanup an toàn tuyệt đối
+      const widget = document.querySelector('#live2d-widget');
+      if (widget?.parentNode) {
+        widget.parentNode.removeChild(widget);
       }
 
-      waitForWidget()
-    }
+      // ✅ xóa flag để có thể re-init lần sau nếu cần
+      delete (window as any).L2Dwidget;
+      delete (window as any).__live2d_initialized;
+    };
+  }, [modelJsonPath, style, className]);
 
-    document.body.appendChild(script)
-  }, [modelJsonPath])
-
-  return null
+  return null;
 }
