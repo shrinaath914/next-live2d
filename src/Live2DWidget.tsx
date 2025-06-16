@@ -3,9 +3,11 @@ import { useEffect } from 'react'
 
 type Props = {
   modelName: string
+  style?: React.CSSProperties;
+  className?: string;
 }
 
-export default function Live2DWidget({ modelName }: Props) {
+export default function Live2DWidget({ modelName, style, className }: Props) {
   const modelJsonPath = `https://raw.githubusercontent.com/dangtranhuu/next-live2d/refs/heads/main/models/${modelName}/model.json`
 
   useEffect(() => {
@@ -44,16 +46,12 @@ export default function Live2DWidget({ modelName }: Props) {
           transition: 'bottom 0.3s ease-in-out',
           zIndex: '9999',
           pointerEvents: 'none',
+          ...style,
         })
 
-        let lastScrollTop = 0
-        const handleScroll = () => {
-          const currentScrollTop = window.scrollY
-          el.style.bottom = currentScrollTop < lastScrollTop ? '20px' : '-20px'
-          lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop
+        if (className) {
+          el.className += ' ' + className
         }
-
-        window.addEventListener('scroll', handleScroll)
       }
 
       waitForWidget()
