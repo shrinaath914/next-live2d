@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from 'react';
-export default function Live2DWidget({ modelName }) {
+export default function Live2DWidget({ modelName, style, className }) {
     const modelJsonPath = `https://raw.githubusercontent.com/dangtranhuu/next-live2d/refs/heads/main/models/${modelName}/model.json`;
     useEffect(() => {
         const script = document.createElement('script');
@@ -36,14 +36,11 @@ export default function Live2DWidget({ modelName }) {
                     transition: 'bottom 0.3s ease-in-out',
                     zIndex: '9999',
                     pointerEvents: 'none',
+                    ...style,
                 });
-                let lastScrollTop = 0;
-                const handleScroll = () => {
-                    const currentScrollTop = window.scrollY;
-                    el.style.bottom = currentScrollTop < lastScrollTop ? '20px' : '-20px';
-                    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-                };
-                window.addEventListener('scroll', handleScroll);
+                if (className) {
+                    el.className += ' ' + className;
+                }
             };
             waitForWidget();
         };
