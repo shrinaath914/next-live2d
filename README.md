@@ -47,6 +47,39 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 }
 ```
 
+## 🔧 Advanced Usage
+
+Since `v1.4.0`, you can customize the widget with:
+
+`className`: Tailwind or custom CSS classes
+
+`style`: Inline `React.CSSProperties` object
+
+#### Example:
+```tsx
+<Live2DWidget
+  modelName="senko"
+  className="bottom-0 right-0 fixed z-50 opacity-80"
+  style={{ width: 200, height: 300 }}
+/>
+```
+
+#### Props
+
+
+| Prop        | Type                   | Required | Mô tả                                                                 |
+|-------------|------------------------|----------|------------------------------------------------------------------------|
+| `modelName` | `string`               | ✅       | Name of the model folder (must include `model.json`)                    |
+| `className` | `string`               | ❌       | Custom CSS or Tailwind classes applied to the widget container (ví dụ: `fixed bottom-0`)    |
+| `style`     | `React.CSSProperties`  | ❌       | Inline styles (e.g., width, height, position)             |
+
+---
+
+## 🧠 Tips
+
+The Live2D widget is rendered into a #live2d-widget DOM element, positioned as fixed by default.
+
+If you pass className or style, they will override the default style.
 
 ## 📁 Model Path
 By default, the widget looks for:
