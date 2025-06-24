@@ -74,8 +74,8 @@ export default function Live2DWidget({ modelName, style, className }: Props) {
       }
 
       // ✅ xóa flag để có thể re-init lần sau nếu cần
-      delete (window as any).L2Dwidget;
-      delete (window as any).__live2d_initialized;
+      (window as any).L2Dwidget = undefined;
+      (window as any).__live2d_initialized = false;
     };
   }, [modelJsonPath, style, className]);
 

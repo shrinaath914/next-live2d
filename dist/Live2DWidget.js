@@ -58,8 +58,8 @@ export default function Live2DWidget({ modelName, style, className }) {
                 widget.parentNode.removeChild(widget);
             }
             // ✅ xóa flag để có thể re-init lần sau nếu cần
-            delete window.L2Dwidget;
-            delete window.__live2d_initialized;
+            window.L2Dwidget = undefined;
+            window.__live2d_initialized = false;
         };
     }, [modelJsonPath, style, className]);
     return null;

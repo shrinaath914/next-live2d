@@ -129,16 +129,10 @@ export default function Page() {
   return <Live2DWidget modelName="${model}" />
 }`}
             </SyntaxHighlighter>
-
           </div>
-
-
-
         </div>
 
         <Live2DWidget modelName={model} />
-
-
 
       </div>
     </div>
