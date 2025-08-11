@@ -41,7 +41,8 @@ const MODELS = [
   "uni",
   "wed_16",
   "xisitina",
-  "z16"
+  "z16",
+  "Encando_Chata"
 ]
 
 export default function Home() {

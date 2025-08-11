@@ -10,6 +10,7 @@ type Props = {
 export default function Live2DWidget({ modelName, style, className }: Props) {
   const modelJsonPath = `https://raw.githubusercontent.com/dangtranhuu/next-live2d/refs/heads/main/models/${modelName}/model.json`;
 
+
   useEffect(() => {
     // ✅ Đã khởi tạo rồi thì không lặp lại
     if ((window as any).__live2d_initialized) return;
