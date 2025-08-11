@@ -1,0 +1,12 @@
+Chata Model Resource Package
+Exported from: Live2D Cubism 4.1
+Purpose: Integration into a Web project using Live2D Cubism SDK for Web
+
+Included Files
+- Encando_Chata.model3.json           // Main entry file to load the model with Cubism SDK for Web
+- Encando_Chata.moc3     // Core model data
+- Animation_chata.motion3.json // Animation file (e.g. idle, wave, etc.)
+- texture_00 (*.png)      // Images used for rendering
+- Chata.gif           // Optional preview animation
+
+Thanks!
